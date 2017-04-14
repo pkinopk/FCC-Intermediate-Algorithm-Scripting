@@ -386,3 +386,35 @@ binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 0110
 
 //------------------------------------------------------------------------------
 //Everything Be True
+
+function truthCheck(collection, pre) {
+  var check = true;
+
+  for (var i = 0; i < collection.length; i++) {
+    if (!collection[i].hasOwnProperty(pre)) {
+      check = false;
+    }
+    if (!collection[i][pre]) {
+      check = false;
+    }
+  }
+  return check;
+}
+
+truthCheck([{
+  "user": "Tinky-Winky",
+  "sex": "male",
+  "age": 0
+}, {
+  "user": "Dipsy",
+  "sex": "male",
+  "age": 3
+}, {
+  "user": "Laa-Laa",
+  "sex": "female",
+  "age": 5
+}, {
+  "user": "Po",
+  "sex": "female",
+  "age": 4
+}], "age");
