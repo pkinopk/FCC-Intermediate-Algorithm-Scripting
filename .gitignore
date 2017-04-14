@@ -1,12 +1,25 @@
-*.class
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# Created by https://www.gitignore.io/api/windows
 
-# Package Files #
-*.jar
-*.war
-*.ear
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# End of https://www.gitignore.io/api/windows
