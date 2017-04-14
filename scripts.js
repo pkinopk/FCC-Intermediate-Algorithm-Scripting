@@ -313,3 +313,6 @@ function findElement(arr, func) {
 findElement([1, 2, 3, 4], function(num) {
   return num % 2 === 0;
 });
+
+//------------------------------------------------------------------------------
+//Drop it
