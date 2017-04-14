@@ -330,3 +330,36 @@ dropElements([0, 1, 0, 1], function(n) {
 
 //------------------------------------------------------------------------------
 //Steamroller
+
+function steamrollArray(arr) {
+  var newArr = [];
+  var finalArr = [];
+
+  arr = arr.toString();
+  arr = arr.replace(/\[object Object\]/g, "{}");
+  arr = arr.replace(/,,/g, ",");
+  arr = arr.split(",");
+
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] == parseInt(arr[i])) {
+      newArr.push(parseInt(arr[i]));
+    } else {
+      newArr.push(arr[i]);
+    }
+  }
+
+  for (var i = 0; i < newArr.length; i++) {
+    if (newArr[i] == "{}") {
+      finalArr.push({});
+    } else {
+      finalArr.push(newArr[i]);
+    }
+  }
+  return finalArr;
+}
+
+steamrollArray([1, {},
+  [3, [
+    [4]
+  ]]
+]);
