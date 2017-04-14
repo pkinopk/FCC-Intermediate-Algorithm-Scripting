@@ -303,4 +303,4 @@ function smallestCommons(arr) {
 smallestCommons([23, 18]);
 
 //------------------------------------------------------------------------------
-//Smallest Common Multiple
+//Finders Keepers
