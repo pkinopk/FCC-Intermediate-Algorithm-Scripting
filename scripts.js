@@ -282,7 +282,7 @@ function smallestCommons(arr) {
   if (a > b) {
     a = b;
     b = arr[0];
-  }g
+  }
 
   var i = b;
 
@@ -301,3 +301,6 @@ function smallestCommons(arr) {
 }
 
 smallestCommons([23, 18]);
+
+//------------------------------------------------------------------------------
+//Smallest Common Multiple
