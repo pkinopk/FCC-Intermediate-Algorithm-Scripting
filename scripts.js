@@ -316,3 +316,14 @@ findElement([1, 2, 3, 4], function(num) {
 
 //------------------------------------------------------------------------------
 //Drop it
+
+function dropElements(arr, func) {
+  while (!func(arr[0])) {
+    arr = arr.slice(1, arr.length);
+  }
+  return arr;
+}
+
+dropElements([0, 1, 0, 1], function(n) {
+  return n === 1;
+});
