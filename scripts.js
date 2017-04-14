@@ -274,34 +274,6 @@ sumPrimes(10);
 //------------------------------------------------------------------------------
 //Smallest Common Multiple
 
-// function smallestCommons(arr) {
-//   var found = false;
-//
-//   var a = arr[0];
-//   var b = arr[1];
-//   if (a > b) {
-//     a = b;
-//     b = arr[0];
-//   }
-//
-//   var i = b;
-//
-//   do {
-//     found = true;
-//     for (var j = a; j <= b; j++) {
-//       if (i % j !== 0) {
-//         found = false;
-//         break;
-//       }
-//     }
-//     i++;
-//   } while (!found);
-//
-//   return --i;
-// }
-//
-// smallestCommons([23, 18]);
-
 function smallestCommons(arr) {
   var found = false;
 
@@ -310,21 +282,22 @@ function smallestCommons(arr) {
   if (a > b) {
     a = b;
     b = arr[0];
-  }
+  }g
 
   var i = b;
 
   do {
-
-    for (var j = a; j <= b; j++)
-      if (i % j !== 0)
+    found = true;
+    for (var j = a; j <= b; j++) {
+      if (i % j !== 0) {
+        found = false;
         break;
-    if (j === b + 1)
-      found = true;
+      }
+    }
     i++;
   } while (!found);
 
   return --i;
 }
 
-// smallestCommons([23, 18]);
+smallestCommons([23, 18]);
